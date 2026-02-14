@@ -9,8 +9,8 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Set environment variable for build
-ENV NEXT_PUBLIC_API_URL=http://54.237.242.14:5000/api
+# API URL is set at build time via docker-compose build 
+ENV NEXT_PUBLIC_API_URL=http://100.51.99.225:5000/api
 
 RUN npm run build
 
