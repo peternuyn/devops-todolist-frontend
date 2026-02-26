@@ -10,7 +10,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # API URL is set at build time via docker-compose build 
-ENV NEXT_PUBLIC_API_URL=http://100.51.99.225:5000/api
+ENV NEXT_PUBLIC_API_URL=http://3.106.32.90:5000/api
 
 RUN npm run build
 
